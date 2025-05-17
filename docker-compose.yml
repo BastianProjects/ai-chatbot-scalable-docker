@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  ai-chatbot:
+    build: .
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      - .:/app
+      - chromadb_data:/app/chroma_DB
+    ports:
+      - "8501:8501"
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    ports:
+      - "11434:11434"
+    volumes:
+      - C:/Users/USER/.ollama:/root/.ollama
+
+volumes:
+  chromadb_data:

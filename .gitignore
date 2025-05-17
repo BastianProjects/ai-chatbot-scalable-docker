@@ -1,0 +1,15 @@
+# Ignore log files
+*.log
+*.pkl
+# Ignore temp folders
+temp/
+venv/
+env/
+.vs/
+chroma_DB/
+pdfs/Resume_copy.pdf
+pdfs/receipt-58399354.en.pdf
+pdfs/Designing Data-Intensive Applications The Big Ideas Behind Reliable, Scalable, and Maintainable Systems (Martin Kleppmann) (z-lib.org).pdf
+/__pycache__
+/video_uploads
+/pdfs

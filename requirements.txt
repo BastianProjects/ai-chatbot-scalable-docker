@@ -1,0 +1,17 @@
+
+streamlit
+langchain_core
+langchain_community
+langchain_ollama
+selenium
+unstructured
+unstructured[pdf]
+pandas
+pdfminer.six
+pi_heif
+unstructured_inference
+pytesseract
+chromadb
+openai-whisper
+Pillow
+opencv-python-headless
